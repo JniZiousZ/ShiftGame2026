@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ba5j4e34quoha"]
+
+[ext_resource type="Texture2D" uid="uid://du8ra23bwf7bg" path="res://addons/godot-prototype-texture/PNG/checker_512x512/checker_black_512x512.png" id="1_gxbh7"]
+[ext_resource type="Texture2D" uid="uid://cfg1pv5couwc7" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_blue_512x512.png" id="1_vo8sw"]
+[ext_resource type="Texture2D" uid="uid://b75234j56hkvn" path="res://addons/godot-prototype-texture/PNG/checker_512x512/checker_yellow_512x512.png" id="3_7fmhn"]
+[ext_resource type="PackedScene" uid="uid://digp0kwecn06c" path="res://player.tscn" id="3_883nb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nk8ey"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_gxbh7"]
+sky_material = SubResource("ProceduralSkyMaterial_nk8ey")
+
+[sub_resource type="Environment" id="Environment_vo8sw"]
+background_mode = 2
+sky = SubResource("Sky_gxbh7")
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_883nb"]
+albedo_texture = ExtResource("1_vo8sw")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vo8sw"]
+albedo_texture = ExtResource("1_gxbh7")
+uv1_scale = Vector3(0.81, 0.81, 0.81)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbk3n"]
+albedo_texture = ExtResource("3_7fmhn")
+
+[node name="prototype" type="Node3D" unique_id=1066253740]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1790699978]
+environment = SubResource("Environment_vo8sw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=233437325]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=461172884]
+transform = Transform3D(1, 0, 0, 0, 0.554707, 0, 0, 0, 1, 3.2120693, 1.25, -2.7309756)
+material_override = SubResource("StandardMaterial3D_883nb")
+use_collision = true
+radius = 0.838
+height = 3.8320313
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1574952619]
+material_override = SubResource("StandardMaterial3D_vo8sw")
+use_collision = true
+size = Vector3(15, 0.2, 15)
+
+[node name="Player" parent="." unique_id=760923418 instance=ExtResource("3_883nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Reality2" type="Node3D" parent="." unique_id=1040129501]
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Reality2" unique_id=395648464]
+transform = Transform3D(1, 0, 0, 0, 0.554707, 0, 0, 0, 1, 58.212, 1.25, -2.731)
+material_override = SubResource("StandardMaterial3D_mbk3n")
+use_collision = true
+radius = 0.838
+height = 3.8320313
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Reality2" unique_id=961061110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, 0)
+material_override = SubResource("StandardMaterial3D_vo8sw")
+use_collision = true
+size = Vector3(15, 0.2, 15)
