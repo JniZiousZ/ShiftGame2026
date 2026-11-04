@@ -29,6 +29,11 @@ uv1_triplanar = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbk3n"]
 albedo_texture = ExtResource("3_7fmhn")
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7o0as"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ka5s"]
+albedo_color = Color(0.9261841, 0.13470027, 0.12748122, 1)
+
 [node name="prototype" type="Node3D" unique_id=1066253740]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1790699978]
@@ -67,3 +72,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, 0)
 material_override = SubResource("StandardMaterial3D_vo8sw")
 use_collision = true
 size = Vector3(15, 0.2, 15)
+
+[node name="Dummy" type="CSGMesh3D" parent="." unique_id=2117095693 groups=["Enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6788144, 1.3629742, -4.551093)
+use_collision = true
+mesh = SubResource("CapsuleMesh_7o0as")
+material = SubResource("StandardMaterial3D_1ka5s")

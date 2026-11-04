@@ -6,6 +6,226 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_a1ijd"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_7o0as"]
+size = Vector3(0.26367188, 1.4584961, 0.20703125)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7o0as"]
+size = Vector3(0.32421875, 1.5073242, 0.15808105)
+
+[sub_resource type="Animation" id="Animation_4flbx"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Weapon:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.812, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weapon:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.33, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Weapon:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Weapon:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.17453292, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Weapon:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Weapon:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.05235988, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_i3pqv"]
+resource_name = "attack"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Weapon:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2, 0),
+"points": PackedFloat32Array(1.812, -0.25, 0, 0.25, 0, 1.812, -0.050000004, 0, 0.0033333302, 0, 0.497, -0.083333336, 0.21916668, 0, 0, 1.812, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weapon:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2, 0),
+"points": PackedFloat32Array(-0.33, -0.25, 0, 0.25, 0, 0.045, -0.050000004, 0, 0.0033333302, 0, -1.33, -0.083333336, 0.16666667, 0, 0, -0.33, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Weapon:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2, 0),
+"points": PackedFloat32Array(-1.7, -0.25, 0, 0.25, 0, -1.7, -0.050000004, 0, 0.0033333302, 0, -1.805, -0.083333336, 0.017499983, 0, 0, -1.7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Weapon:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 0),
+"points": PackedFloat32Array(-0.2617994, -0.25, 0, 0.25, 0, -0.06981317, -0.050000004, -0.031997707, 0, 0, -1.2915436, -0.03333333, 0.20362175, 0, 0, -0.2617994, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Weapon:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.6806784, -0.050000004, 0.113446414, 0, 0, 0.6963864, -0.03333333, -0.2295108, 0, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5, 1)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Weapon:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 0),
+"points": PackedFloat32Array(-0.05235988, -0.25, 0, 0.25, 0, -0.13788101, -0.050000004, 0.014253522, 0, 0, -0.3822271, -0.03333333, 0.04072435, 0, 0, -0.05235988, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5, 1)
+}
+
+[sub_resource type="Animation" id="Animation_onrkg"]
+resource_name = "idle"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Weapon:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1.812, -0.25, 0, 0.25, 0, 1.812, -0.083333336, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weapon:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0),
+"points": PackedFloat32Array(-0.33, -0.25, 0, 0.25, 0, -0.17, -0.083333336, -0.02416667, 0, 0, -0.33, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Weapon:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-1.7, -0.25, 0, 0.25, 0, -1.7, -0.083333336, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Weapon:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(2, 0, 0),
+"points": PackedFloat32Array(-0.2617994, 0, 0, 0.083333336, 0.0145444125, -0.17453292, -0.25, 0, 0.25, 0, -0.2617994, 0, 0, 0.083333336, 0.0145444125),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Weapon:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.083333336, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Weapon:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(-0.05235988, 0, 0, 0.083333336, 0, -0.05235988, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i3pqv"]
+_data = {
+&"RESET": SubResource("Animation_4flbx"),
+&"attack": SubResource("Animation_i3pqv"),
+&"idle": SubResource("Animation_onrkg")
+}
+
 [node name="Player" type="CharacterBody3D" unique_id=760923418]
 script = ExtResource("1_4flbx")
 
@@ -21,6 +241,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66876054, -0.14201093)
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=685899465]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.3841858e-07)
 
+[node name="Weapon" type="MeshInstance3D" parent="Head/Camera3D" unique_id=371820987]
+transform = Transform3D(0.99862945, 0.052335955, 0, -0.05154085, 0.983458, 0.17364816, 0.009088043, -0.17341018, 0.98480767, 1.812, -0.33, -1.7)
+mesh = SubResource("BoxMesh_7o0as")
+
+[node name="Area3D" type="Area3D" parent="Head/Camera3D/Weapon" unique_id=146371257]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Weapon/Area3D" unique_id=346297194]
+transform = Transform3D(1, -1.1767261e-06, -1.1455268e-07, 2.1187589e-08, 0.9999991, -1.4901161e-08, 5.5879354e-09, -4.0978193e-06, 1, -0.0048826933, 0.0012208223, 0.016174197)
+shape = SubResource("BoxShape3D_7o0as")
+
 [node name="shiftcooldown" type="Timer" parent="." unique_id=1274033741]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1063046536]
+root_node = NodePath("../Head/Camera3D")
+libraries/ = SubResource("AnimationLibrary_i3pqv")
 
 [connection signal="timeout" from="shiftcooldown" to="." method="_on_shiftcooldown_timeout"]
